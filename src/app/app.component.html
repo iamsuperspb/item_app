@@ -1,0 +1,12 @@
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <app-recipes (recipeAdded)="onRecipeAdded($event)"></app-recipes>
+    </div>
+    <div class="col-md-6">
+      <app-shopping-list *ngFor="let dummyData of dummyDatas" [data]="dummyData"></app-shopping-list>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
